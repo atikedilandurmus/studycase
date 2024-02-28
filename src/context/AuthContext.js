@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
   const refreshAccessToken = async () => {
     try {
       const refreshToken = await AsyncStorage.getItem('refreshToken');
-      const response = await axios.post(`${BASE_URL}/api/v1/auth/refresh-token`, {
+      const response = await axios.post(`${BASE_URL}/api/v1/auth/refresh`, {
         refreshToken
       });
   
